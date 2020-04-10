@@ -68,11 +68,13 @@ h1 {
 /* Right Side */
 #detailes ul li:nth-child(odd) div {
   left: 40px;
+  transform: translate(200px , 0);
 }
 
 /* Left Side */
 #detailes ul li:nth-child(even) div {
   left: -434px;
+  transform: translate(-200px , 0);
 }
 
 /* Dots */
@@ -113,6 +115,11 @@ h1 {
   border-color: transparent transparent transparent var(--secondary-color);
 }
 
+/* Show Base */
+#detailes ul li.show div {
+  transform: none;
+
+}
 /* Responsive */
 @media (max-width: 900px) {
   #detailes ul li div {
