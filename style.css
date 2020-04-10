@@ -63,6 +63,8 @@ h1 {
   padding: 1rem;
   background: var(--secondary-color);
   transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
 
 /* Right Side */
@@ -85,7 +87,7 @@ h1 {
   bottom: 0;
   width: 25px;
   height: 25px;
-  background: var(--secondary-color);
+  background: inherit;
   transform: translateX(-50%);
   border-radius: 50%;
   transition: background 0.5s ease-in-out;
@@ -115,11 +117,16 @@ h1 {
   border-color: transparent transparent transparent var(--secondary-color);
 }
 
-/* Show Base */
+/* Show Boxes */
 #detailes ul li.show div {
   transform: none;
-
+  visibility: visible;
+  opacity: 1;
 }
+#detailes ul li.show::after {
+  background: var(--secondary-color);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   #detailes ul li div {
